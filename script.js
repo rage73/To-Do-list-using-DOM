@@ -9,7 +9,7 @@ btnAdd.onclick = function() {
     spnTask.innerText = inpBox.value;
     
     let btnX = document.createElement('button');
-    btnX.innerText = "X"; 
+    btnX.innerText = "🗑"; 
     btnX.onclick = function(event) {
         event.target.parentElement.remove();
     }
@@ -30,7 +30,7 @@ btnAdd.onclick = function() {
     let btnDown = document.createElement('button');
     btnDown.innerText = "↓"; 
     btnDown.onclick = function(event) {
-        if(event.target.parentElement.previousElementSibling == null) {
+        if(event.target.parentElement.nextElementSibling == null) {
             console.error("No Element Below!");
             return;
         }
